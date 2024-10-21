@@ -14,7 +14,7 @@ var blogs = [
         description: "On Monday, I have my second STAT 350 midterm. I am trying to be as efficient as possible with all my work tonight, so I can have enough time to effectively study for it tomorrow. I did well on my first midterm, so now it's time to do it again.",
         image: "./images/statstextbook.jpeg",
         imageAlt: "picture of my STAT 350 textbook",
-        slug: "studying-for-my-stat-350-midterm"
+        slug: "studying-for-midterm"
     }
 ];
 var blogPosts = document.getElementById('blog-posts');
@@ -23,23 +23,32 @@ if (blogPosts) {
         //create the blog container div
         var blogDiv = document.createElement('div');
         blogDiv.classList.add('blog-post'); //add a class
+        //create a routing element (a)
+        var blogRoute = document.createElement('a');
+        blogRoute.href = "./blogs/".concat(blog.slug, ".html");
         //create the title element (h1)
         var titleElement = document.createElement('h1');
         titleElement.textContent = blog.title;
         titleElement.classList.add('blog-title');
+        blogRoute.appendChild(titleElement);
+        // Create and append date
+        var dateElement = document.createElement('p');
+        dateElement.textContent = blog.date;
+        dateElement.classList.add('blog-date');
+        blogRoute.appendChild(dateElement);
         //create the image element (img)
         var imgElement = document.createElement('img');
         imgElement.src = blog.image;
         imgElement.alt = blog.imageAlt;
         imgElement.classList.add('blog-image');
+        blogRoute.appendChild(imgElement);
         //create the description element (p)
         var descriptionElement = document.createElement('p');
         descriptionElement.textContent = blog.description;
         descriptionElement.classList.add("blog-description");
-        //append the title, image, and description to the blogDiv
-        blogDiv.appendChild(titleElement);
-        blogDiv.appendChild(imgElement);
-        blogDiv.appendChild(descriptionElement);
+        blogRoute.appendChild(descriptionElement);
+        //append blog link to blog post container
+        blogDiv.appendChild(blogRoute);
         //append the blogDiv to the main blog container
         blogPosts.appendChild(blogDiv);
     });
