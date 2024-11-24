@@ -1,0 +1,26 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--cg-gradient-dark);
+  color: var(--cg-white);
+  bottom: 0;
+  width: 100%;
+  height: 3.5rem;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+  border-top: 2px solid var(--cg-light-purple);
+}
+
+.footer:hover {
+  background: var(--cg-purple);
+  color: var(--cg-white);
+}
+
+.footer a {
+  color: var(--cg-white);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
