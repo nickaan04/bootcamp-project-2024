@@ -10,14 +10,15 @@ export default function Home() {
             <Image
               src="/nickaanjahadi.jpg"
               alt="An image of me, Nickaan Jahadi (This is on my LinkedIn)"
-              layout="intrinsic"
+              layout="responsive"
               width={350}
-              height={500} />
+              height={500}
+            />
           </div>
           <div className="about-text">
             <p>
               Hello! My name is Nickaan Jahadi and I am a
-              <strong>third year computer engineering major</strong>. I grew up
+              <strong> third year computer engineering major</strong>. I grew up
               in San Diego and love nutrition, working out, and playing/watching
               sports, especially basketball, boxing, and MMA.
             </p>

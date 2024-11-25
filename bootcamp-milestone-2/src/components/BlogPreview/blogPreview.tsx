@@ -13,9 +13,10 @@ export default function BlogPreview(props: Blog) {
             className={style.blogImage}
             src={props.image}
             alt={props.imageAlt}
-            layout="intrinsic"
+            layout="responsive"
             width={400}
-            height={500} />
+            height={500}
+          />
           <p className={style.blogDescription}>{props.description}</p>
           <p className={style.blogDate}>{props.date}</p>
         </div>
