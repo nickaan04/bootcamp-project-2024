@@ -12,7 +12,7 @@ export default function Home() {
               alt="An image of me, Nickaan Jahadi (This is on my LinkedIn)"
               layout="intrinsic"
               width={350}
-              height={500}></Image>
+              height={500} />
           </div>
           <div className="about-text">
             <p>

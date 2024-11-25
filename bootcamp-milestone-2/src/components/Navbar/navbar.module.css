@@ -17,7 +17,9 @@
   color: var(--cg-white);
 
   padding: 15px 20px; /* Increased padding for better spacing */
-  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition:
+    background-color 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
 }
 
 .navbar:hover {
@@ -43,9 +45,12 @@
   text-decoration: none;
   letter-spacing: 1.5px; /* Subtle letter spacing for better readability */
   padding: 10px 15px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 
-  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, transform 0.3s ease;
+  transition:
+    color 0.3s ease-in-out,
+    background-color 0.3s ease-in-out,
+    transform 0.3s ease;
   border-radius: 5px;
 }
 
@@ -64,12 +69,14 @@
 
 /* Logo Styles */
 .logo a {
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
   font-size: 28px; /* Slightly smaller for a balanced layout */
   color: var(--cg-white);
   padding: 10px 20px;
   border-radius: 10px;
-  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition:
+    transform 0.3s ease-in-out,
+    color 0.3s ease-in-out;
 }
 
 .logo a:hover {
