@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <div>
@@ -5,10 +7,12 @@ export default function Home() {
         <h1 className="page-title">What's up!</h1>
         <div className="about">
           <div className="about-image">
-            <img
-              src="../public/nickaanjahadi.jpg"
+            <Image
+              src="/nickaanjahadi.jpg"
               alt="An image of me, Nickaan Jahadi (This is on my LinkedIn)"
-            />
+              layout="intrinsic"
+              width={350}
+              height={500}></Image>
           </div>
           <div className="about-text">
             <p>
