@@ -1,34 +1,25 @@
 import React from "react";
 import style from "./portfolio.module.css";
 import Image from "next/image";
-import Link from "next/link";
+import type { Project } from "../../database/projectSchema";
 
-export default function Portfolio() {
+export default function Portfolio(props: Project) {
   return (
     <div>
       <div className={style.project}>
-        <Link href="/">
-          <Image
-            className={style.projectImage}
-            src="/homepage.png"
-            alt="Picture of the home page"
-            layout="responsive"
-            width={600}
-            height={500}
-          />
-        </Link>
+        <Image
+          className={style.projectImage}
+          src={props.image}
+          alt={props.image_alt}
+          layout="responsive"
+          width={600}
+          height={500}
+        />
         <div className={style.projectDetails}>
           <p className={style.projectName}>
-            <strong>Hack4Impact Starter Pack Personal Website</strong>
+            <strong>{props.name}</strong>
           </p>
-          <p className={style.projectDescription}>
-            This is my version of the Hack4Impact Starter Pack, which is a step
-            by step guide on getting started with web development and
-            understanding what it's like to be a software developer in
-            Hack4Impact. I learned the fundamentals of Git, HTML, and CSS, and
-            gained new skills to build my very own personal website.
-          </p>
-          <Link href="/">Learn more</Link>
+          <p className={style.projectDescription}>{props.description}</p>
         </div>
       </div>
     </div>
