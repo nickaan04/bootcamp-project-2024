@@ -36,7 +36,8 @@ export default function Contact() {
         name="message"
         placeholder="Message"
         required
-        className={style.textarea} />
+        className={style.textarea}
+      />
 
       <input type="submit" value="Submit" className={style.submitButton} />
     </form>

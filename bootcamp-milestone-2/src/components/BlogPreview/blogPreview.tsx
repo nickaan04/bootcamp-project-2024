@@ -31,4 +31,3 @@ export default function BlogPreview(props: Blog) {
     </div>
   );
 }
-
